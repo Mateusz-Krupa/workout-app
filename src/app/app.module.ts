@@ -4,15 +4,26 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { RouterModule } from '@angular/router';
+import { Register } from './register-component/register.component';
+import { RegisterForm } from './register-component/register-form/register.form';
+import { Stars } from './ui/stars/stars';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    Register,
+    RegisterForm,
+    Stars
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot([
+      { path: 'register', component: Register }
+
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
