@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: "register-form",
   templateUrl: "register.form.html",
-  styleUrls: ["register.form.sass"]
+  styleUrls: ["register.form.sass", "checkbox.css"]
 })
 export class RegisterForm {
 

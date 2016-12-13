@@ -3,9 +3,11 @@
   .register__form
     text-align: center
     margin-top: 10px
+    padding: 0 10px
 
-    input
-      width: 70%
+
+    .firstname__input, .lastname__input, .email__input, .tel__input, .text__input
+      width: 100%
       border-radius: 30px
       padding: 7px
       box-sizing: border-box
@@ -18,7 +20,7 @@
 
 
     .sport__select
-      width: 70%
+      width: 100%
       border-radius: 30px
       padding: 7px
       border: none
@@ -30,14 +32,11 @@
 
     .register__sport-level
       text-align: left
-      margin-left: 17%
 
     .select-level__container
-      margin-left: 15%
       width: 100%
 
       .level__select
-        width: 15%
         float: left
         border-radius: 30px
         margin-top: 15px
@@ -57,6 +56,53 @@
 
         .stars__img
           width: 80%
+
+  .add__link
+    margin-left: 18%
+    color: green
+
+  .register__add
+    text-align: left
+
+  .checkbox__wrapper
+    width: 100%
+    display: inline-block
+    .checkbox__container
+      display: inline-block
+      text-align: left
+      .checkbox__input
+        width: 100%
+        position: relative
+        box-sizing: border-box
+        .checkbox
+          position: absolute
+          left: 0
+        label
+          float: left
+          width: 15%
+          padding: 0
+          margin: 0
+
+        span
+          display: inline-block
+          float: right
+          width: 84%
+
+
+
+  .submit__button
+    background-color: rgb(224,112,33)
+    width: 100%
+    text-transform: uppercase
+    color: white
+    border: none
+    padding: 10px
+    margin-bottom: 20px
+
+
+
+.clearfix
+  overflow: auto
 
 
 

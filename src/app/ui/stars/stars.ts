@@ -1,21 +1,27 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChange } from '@angular/core';
+
 
 @Component({
   selector: "stars",
   templateUrl: "stars.html",
-  styleUrls: ["stars.sass"],
-  encapsulation: ViewEncapsulation.Native
+  styleUrls: ["stars.sass"]
 })
 export class Stars {
 
-  starsArray=[
-    {filled:true, position: 1},
-    {filled:true, position: 2},
-    {filled:true, position: 3}
-  ];
+  @Input()
+  items: number;
 
-  onCLick(){
-    this.starsArray.push({filled: true, position: 3});
+  starsArray = [];
+
+  ngOnChanges(changes) {
+    this.createStarsArray(changes.items.currentValue);
+  }
+
+  createStarsArray(numberOfStars){
+    this.starsArray = [];
+    for(let i=0;i<numberOfStars;i++){
+      this.starsArray.push({filled: true, position: i});
+    }
   }
 
 }

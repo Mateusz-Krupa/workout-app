@@ -1,0 +1,68 @@
+<form name="registerForm" class="register__form">
+  <input type="text" class="firstname__input" name='firstname' [(ngModel)]="user.firstname" #firstname="ngModel"
+         placeholder="Imię"/>
+  <input type="text" class="lastname__input" name="lastname" [(ngModel)]="user.lastname" #lastname="ngModel"
+         placeholder="Nazwisko"/>
+  <input type="email" class="email__input" name='email' [(ngModel)]="user.email" #email="ngModel" placeholder="e-mail"
+         required/>
+  <!--<p> {{email.errors | json }} </p>-->
+  <input type="tel" class="tel__input" name="tel" [(ngModel)]="user.tel" #tel="ngModel" placeholder="telefon"/>
+  <input type="text" class="text__input" name="city" [(ngModel)]="user.city" #city="ngModel" placeholder="Miejscowość"/>
+  <select class="sport__select">
+    <option>Sport</option>
+  </select>
+  <p class="register__sport-level">Poziom zaawansowania<br/>
+    (od 0 do 10)</p>
+  <div class="select-level__container clearfix">
+    <select class="level__select" name="stars" [(ngModel)]="user.stars" #stars="ngModel">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
+
+    <!--<p >{{user | json }}</p>-->
+
+    <div class="stars__container">
+      <stars [items]="user.stars"></stars>
+    </div>
+  </div>
+  <div class="register__add">
+    <a href="#" class="add__link">Dodaj kolejny</a>
+  </div>
+  <div class="checkbox__wrapper">
+    <div class="checkbox__container">
+      <p class="checkbox__input">
+        <input type="checkbox" name="checkbox" class="checkbox" id="checkboxAgree1"/>
+        <label for="checkboxAgree1" class="label"></label>
+        <span>
+        Phasellus pellentesque nunc
+        eget elit sagittis, a sodales nulla cursus.
+        </span>
+      </p>
+    </div>
+    <div class="checkbox__container">
+      <p class="checkbox__input">
+        <input type="checkbox" name="checkbox" class="checkbox" id="checkboxAgree2"/>
+        <label for="checkboxAgree2" class="label"></label>
+       <span> Phasellus pellentesque nunc
+        eget elit sagittis, a sodales nulla cursus.
+       </span>
+      </p>
+    </div>
+  </div>
+  <div class="submit-button__container">
+    <button type="submit" class="submit__button">dołącz</button>
+  </div>
+</form>
+
+
+<!--<p>{{user | json}}</p>-->
+<!--<p> {{registerForm | json}} </p>-->
+
