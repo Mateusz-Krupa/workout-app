@@ -8,6 +8,7 @@ import { UiModule } from '../ui/ui.module';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
+import { Profile } from './profile-list/profile/profile';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     HomePage,
     Register,
     ProfileList,
-    RegisterForm
+    RegisterForm,
+    Profile
   ],
   imports: [
     BrowserModule,
