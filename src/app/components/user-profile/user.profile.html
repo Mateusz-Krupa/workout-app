@@ -1,0 +1,24 @@
+<div class="user-profile__wrapper">
+    <div class="gallery__container">
+        <div class="main-pic__container">
+            <img class="main__pic" [src]="mainImg"/>
+        </div>
+        <div class="select-gallery__container">
+            <img class="select__pics" *ngFor="let item of selectImg" [src]="item.smallImage"
+                 (click)="changePic(item.image)"/>
+        </div>
+
+    </div>
+</div>
+<div>
+<button type="submit" class="btn"
+        *ngFor="let button of tabs"
+        (click) = "showContent(button)">{{button.buttonName}}
+</button>
+<div>
+    <p *ngFor="let item of tabs">
+        <span *ngIf="item.active"> {{item.content}} </span>
+    </p>>
+</div>
+
+</div>

@@ -1,4 +1,4 @@
-import { Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: "profile",
@@ -8,7 +8,17 @@ import { Component, Input} from '@angular/core';
 export class Profile {
 
   @Input()
-  user
+  user;
+
+  showStatus(user){
+     user.contactInfo = "skontaktowalem sie";
+
+
+  }
+
+  callStatus(user){
+    user.callInfo = "Dzwoniłem do tego użytkownika";
+  }
 }
 
 

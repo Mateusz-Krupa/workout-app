@@ -12,14 +12,18 @@
         </div>
     </div>
     <div class="user-desc__container">
+        <p class="user_contact"> {{user.contactInfo}} </p>
+        <p class="user_call"> {{user.callInfo}} </p>
+
         <p class="user__desc">{{user.userDesc}}</p>
     </div>
-</div>
-<div class="buttons__wrapper">
-    <div class="msg-btn__container btn-write">
-        <a href="" class="message__btn">Napisz wiadomość</a>
+    <div class="buttons__wrapper">
+        <div class="msg-btn__container btn-write">
+            <a (click)="showStatus(user)" class="message__btn">Napisz wiadomość</a>
+        </div>
+        <div class="msg-btn__container btn-call">
+            <a (click)="callStatus(user)" class="call__btn">Zadzwoń</a>
+        </div>
     </div>
-    <div class="msg-btn__container btn-call">
-        <a href="" class="call__btn">Zadzwoń</a>
-    </div>
+
 </div>
